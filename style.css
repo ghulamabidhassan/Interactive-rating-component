@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Overpass;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--Dark-Blue);
+  margin: 0em 2em;
+  height: auto;
+  padding: 1em 1.4em;
+  border-radius: 1.3em;
+  text-align: left;
+}
+
+.container div {
+  /* display: n; */
+}
+
+.span {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--Very-Dark-Blue);
+  opacity: 0.8;
+  margin: 0.5em 0 0.2em 0;
+}
+
+.star {
+  cursor: pointer;
+}
+
+.svg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0.9;
+}
+
+.title {
+  color: white;
+  margin: 0.65em 0;
+  font-size: 1.5em;
+  font-family: Overpass;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.content {
+  color: var(--Light-Grey);
+  font-size: 0.9em;
+  line-height: 1.5em;
+  opacity: 0.8;
+  margin: 0.65em 0 1.8em 0;
+  letter-spacing: 0.4px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4em;
+}
+
+.numbers > .span {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  display: inline-block;
+  color: var(--Light-Grey);
+  display: grid;
+  place-content: center;
+  transition: 300ms ease-in-out;
+}
+
+.numbers .span:hover {
+  background-color: var(--Medium-Grey);
+  cursor: pointer;
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 2em;
+  padding: 1.2em 0.5em;
+  color: white;
+  background-color: var(--Orange);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-family: Overpass;
+  font-weight: 600;
+  margin-bottom: 1em;
+  transition: 300ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--Orange);
+}
+
+@media screen and (min-width: 48em) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .container {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  .container {
+    width: 27%;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  body {
+    font-size: 1.5em;
+  }
+  .container {
+    width: 27%;
+  }
+
+  .svg {
+    scale: 1.5;
+  }
+
+  .btn {
+    font-size: 0.8em;
+  }
+}
