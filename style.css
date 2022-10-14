@@ -41,8 +41,46 @@ body {
   text-align: left;
 }
 
-.container div {
-  /* display: n; */
+.thankyou {
+  background-color: var(--Dark-Blue);
+  margin: 0em 2em;
+  height: auto;
+  padding: 2.2em 1.4em;
+  border-radius: 1.3em;
+  text-align: center;
+  display: none;
+}
+
+.thankyou > img {
+  scale: 0.8;
+  margin: 0;
+}
+
+.thankyou > * {
+  margin: 0.8em 0;
+}
+
+.selected {
+  padding: 0.35em 1.5em;
+  color: orange;
+  background-color: hsl(217, 12%, 25%);
+  width: fit-content;
+  border-radius: 1em;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.rate {
+  margin: 0 0.2em;
+}
+
+h2 {
+  color: white;
 }
 
 .span {
@@ -134,16 +172,27 @@ body {
   .container {
     width: 50%;
   }
+  .thankyou {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 64em) {
   .container {
     width: 35%;
   }
+
+  .thankyou {
+    width: 35%;
+  }
 }
 
 @media screen and (min-width: 85.375em) {
   .container {
+    width: 27%;
+  }
+
+  .thankyou {
     width: 27%;
   }
 }
@@ -156,6 +205,10 @@ body {
     width: 27%;
   }
 
+  .thankyou {
+    width: 27%;
+  }
+
   .svg {
     scale: 1.5;
   }
@@ -163,4 +216,10 @@ body {
   .btn {
     font-size: 0.8em;
   }
+}
+
+.active {
+  background-color: orange;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
 }
